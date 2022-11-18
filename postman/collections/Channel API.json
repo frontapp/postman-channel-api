@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "262844ac-797a-4955-80fb-2c83fd107745",
+		"name": "Channel API",
+		"description": "Contact Support:\n Name: Front Platform\n Email: api@frontapp.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "19393231-262844ac-797a-4955-80fb-2c83fd107745"
+	},
+	"item": [
+		{
+			"name": "channels/{channel id}",
+			"item": [
+				{
+					"name": "Sync inbound message",
+					"id": "81e90fdd-3d70-462b-970a-893f2a07017a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"sender\": {\n    \"handle\": \"ex do nisi\",\n    \"name\": \"occaecat nulla eu proident\"\n  },\n  \"body\": \"minim mollit enim aliqua\",\n  \"metadata\": {\n    \"external_id\": \"non quis\",\n    \"external_conversation_id\": \"commodo voluptate et velit\"\n  },\n  \"subject\": \"nisi non dolore in\",\n  \"delivered_at\": 95629829,\n  \"attachments\": [\n    \"voluptate\",\n    \"do cillum in\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/channels/:channel_id/inbound_messages",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"channels",
+								":channel_id",
+								"inbound_messages"
+							],
+							"variable": [
+								{
+									"key": "channel_id",
+									"value": "cha_123",
+									"description": "(Required) The channel ID"
+								}
+							]
+						},
+						"description": "Import a message that was received by the channel."
+					},
+					"response": [
+						{
+							"id": "013e50a0-ab9b-4915-9dd4-9ab822a8e1c9",
+							"name": "An accepted message",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"sender\": {\n    \"handle\": \"ex do nisi\",\n    \"name\": \"occaecat nulla eu proident\"\n  },\n  \"body\": \"minim mollit enim aliqua\",\n  \"metadata\": {\n    \"external_id\": \"non quis\",\n    \"external_conversation_id\": \"commodo voluptate et velit\"\n  },\n  \"subject\": \"nisi non dolore in\",\n  \"delivered_at\": 95629829,\n  \"attachments\": [\n    \"voluptate\",\n    \"do cillum in\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/channels/:channel_id/inbound_messages",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"channels",
+										":channel_id",
+										"inbound_messages"
+									],
+									"variable": [
+										{
+											"key": "channel_id",
+											"value": "cha_123",
+											"description": "(Required) The channel ID"
+										}
+									]
+								},
+								"description": "Import a message that was received by the channel."
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"accepted\",\n  \"message_uid\": \"officia\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Sync outbound message",
+					"id": "770e146a-0b26-45c1-abb5-a2e55aaa97c0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"to\": [\n    {\n      \"handle\": \"Lorem et velit\",\n      \"name\": \"consectetur Lorem dolore\"\n    },\n    {\n      \"handle\": \"labore cupidatat proident dolor\",\n      \"name\": \"eu in\"\n    }\n  ],\n  \"body\": \"deserunt laborum ullamco\",\n  \"metadata\": {\n    \"external_id\": \"dolore dolore\",\n    \"external_conversation_id\": \"qui esse sed\"\n  },\n  \"sender_name\": \"irure laborum laboris do\",\n  \"subject\": \"laboris tempor\",\n  \"delivered_at\": 17607317,\n  \"attachments\": [\n    \"incidid\",\n    \"consequat sed ut\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/channels/:channel_id/outbound_messages",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"channels",
+								":channel_id",
+								"outbound_messages"
+							],
+							"variable": [
+								{
+									"key": "channel_id",
+									"value": "cha_123",
+									"description": "(Required) The channel ID"
+								}
+							]
+						},
+						"description": "Import a message that was sent from the channel."
+					},
+					"response": [
+						{
+							"id": "5e0f62e4-4fa2-4d93-a8e1-10eb41736d5d",
+							"name": "An accepted message",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"to\": [\n    {\n      \"handle\": \"Lorem et velit\",\n      \"name\": \"consectetur Lorem dolore\"\n    },\n    {\n      \"handle\": \"labore cupidatat proident dolor\",\n      \"name\": \"eu in\"\n    }\n  ],\n  \"body\": \"deserunt laborum ullamco\",\n  \"metadata\": {\n    \"external_id\": \"dolore dolore\",\n    \"external_conversation_id\": \"qui esse sed\"\n  },\n  \"sender_name\": \"irure laborum laboris do\",\n  \"subject\": \"laboris tempor\",\n  \"delivered_at\": 17607317,\n  \"attachments\": [\n    \"incidid\",\n    \"consequat sed ut\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/channels/:channel_id/outbound_messages",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"channels",
+										":channel_id",
+										"outbound_messages"
+									],
+									"variable": [
+										{
+											"key": "channel_id",
+											"value": "cha_123",
+											"description": "(Required) The channel ID"
+										}
+									]
+								},
+								"description": "Import a message that was sent from the channel."
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"accepted\",\n  \"message_uid\": \"officia\"\n}"
+						}
+					]
+				}
+			],
+			"id": "455ad593-8d96-41e0-9246-6583ed708a36"
+		},
+		{
+			"name": "Your webhook endpoints",
+			"item": [
+				{
+					"name": "Authorization",
+					"id": "473f65e2-ec60-4e03-8b27-9a2ff887c9c1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Front-Signature",
+								"value": "[SIGNED PAYLOAD]",
+								"type": "text"
+							},
+							{
+								"key": "X-Front-Request-Timestamp",
+								"value": "[TIMESTAMP]",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{webhookUrl}}/",
+							"host": [
+								"{{webhookUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Outbound Message from Front",
+					"id": "5d6f4f0d-5f24-4982-aae7-f076bab38f92",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Front-Signature",
+								"value": "[SIGNED PAYLOAD]",
+								"type": "text"
+							},
+							{
+								"key": "X-Front-Request-Timestamp",
+								"value": "[TIMESTAMP]",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{webhookUrl}}/unique_webhook",
+							"host": [
+								"{{webhookUrl}}"
+							],
+							"path": [
+								"unique_webhook"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "279e8cb3-c704-4de9-b187-feb8ce2957da"
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{generatedToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f050c446-8323-4293-acc7-648be9efaf88",
+				"type": "text/javascript",
+				"exec": [
+					"// Sets the Bearer token to authenticate the request to Front",
+					"// In practice, there are libraries that handle JWT creation, but we cannot import them to Postman",
+					"// https://jwt.io/#libraries",
+					"setToken();",
+					"",
+					"/*",
+					" * Given a secret key, generates the API key needed to authenticate the request",
+					" *",
+					" */ ",
+					"function setToken() {",
+					"    const hasAllCredentials = pm.environment.get(\"secretKey\") && pm.environment.get(\"channelTypeId\") && pm.environment.get(\"channelId\");",
+					"    if (!hasAllCredentials)",
+					"        throw new Error('Missing environment variable');",
+					"",
+					"    const signature = pm.environment.get(\"secretKey\");",
+					"    const issuer = pm.environment.get(\"channelTypeId\");",
+					"    ",
+					"    const exp = Math.floor(new Date().valueOf() / 1000) + 5; // Current Date + 5 seconds",
+					"    const payload = {",
+					"      iss: parseInt(issuer, 10),",
+					"      jti: randomString(),",
+					"      sub: pm.environment.get(\"channelId\"),",
+					"      exp",
+					"    };",
+					"",
+					"    const generatedToken = createJWT(payload, signature);",
+					"    console.log(generatedToken);",
+					"",
+					"    pm.environment.set(\"generatedToken\", generatedToken);",
+					"}",
+					"",
+					"// https://www.jonathan-petitcolas.com/2014/11/27/creating-json-web-token-in-javascript.html",
+					"// Creates a JSON web token",
+					"function createJWT(payload, signature) {",
+					"    const unsignedToken = createUnsignedToken(payload);",
+					"",
+					"    return signToken(unsignedToken, signature);",
+					"}",
+					"",
+					"function createUnsignedToken(payload) {",
+					"    const header = {",
+					"      \"typ\": \"JWT\",",
+					"      \"alg\": \"HS256\"",
+					"    };",
+					"    ",
+					"    const stringifiedHeader = CryptoJS.enc.Utf8.parse(JSON.stringify(header));",
+					"    const encodedHeader = base64url(stringifiedHeader);",
+					"    ",
+					"    const stringifiedData = CryptoJS.enc.Utf8.parse(JSON.stringify(payload));",
+					"    const encodedData = base64url(stringifiedData);",
+					"    ",
+					"    return `${encodedHeader}.${encodedData}`;",
+					"}",
+					"",
+					"// Signs an unsigned token",
+					"function signToken(unsignedToken, secret) {",
+					"    let signature = CryptoJS.HmacSHA256(unsignedToken, secret);",
+					"    signature = base64url(signature);",
+					"",
+					"    return `${unsignedToken}.${signature}`;",
+					"}",
+					"",
+					"function base64url(source) {",
+					"  // Encode in classical base64",
+					"  encodedSource = CryptoJS.enc.Base64.stringify(source);",
+					"",
+					"  // Remove padding equal characters",
+					"  encodedSource = encodedSource.replace(/=+$/, '');",
+					"",
+					"  // Replace characters according to base64url specifications",
+					"  encodedSource = encodedSource.replace(/\\+/g, '-');",
+					"  encodedSource = encodedSource.replace(/\\//g, '_');",
+					"",
+					"  return encodedSource;",
+					"}",
+					"",
+					"",
+					"function randomString(n = 16) {",
+					"    return Math.random().toString(36).slice(2);",
+					"}",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "833b515d-91db-4a3f-a876-a1ffa30fb543",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "44b7b496-a150-40b0-b86a-a9437ee299ea",
+			"key": "baseUrl",
+			"value": "https://api2.frontapp.com",
+			"type": "string"
+		}
+	]
+}
