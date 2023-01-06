@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "f06db3ca-98a6-4d79-a177-b9280c8772ca",
+		"_postman_id": "081b8cd2-baea-4322-bc52-e60527e256b1",
 		"name": "Channel API",
 		"description": "Contact Support:\n Name: Front Platform\n Email: api@frontapp.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "19393231-f06db3ca-98a6-4d79-a177-b9280c8772ca"
+		"_uid": "19393231-081b8cd2-baea-4322-bc52-e60527e256b1"
 	},
 	"item": [
 		{
@@ -12,7 +12,7 @@
 			"item": [
 				{
 					"name": "Sync inbound message",
-					"id": "1e8be6bc-a0a0-4d5f-b473-77c67900d0aa",
+					"id": "47a7d259-e01f-4c67-9d0c-bb162da3e669",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -59,7 +59,7 @@
 					},
 					"response": [
 						{
-							"id": "6db0b382-44a2-4dcb-9853-92dda2a9cdb4",
+							"id": "f3413f87-87b8-4110-a9af-1f80e8bfc9ce",
 							"name": "An accepted message",
 							"originalRequest": {
 								"method": "POST",
@@ -119,7 +119,7 @@
 				},
 				{
 					"name": "Sync outbound message",
-					"id": "5d526494-d32e-49b0-ad6a-5f121550d895",
+					"id": "2cdb8060-3876-4ea2-b295-51b6f59e03d3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -166,7 +166,7 @@
 					},
 					"response": [
 						{
-							"id": "24f8c3d0-d3d3-4834-846f-60d472cf53df",
+							"id": "ed638058-a620-4dc9-9abc-58404530584e",
 							"name": "An accepted message",
 							"originalRequest": {
 								"method": "POST",
@@ -225,14 +225,14 @@
 					]
 				}
 			],
-			"id": "7558937c-6e8d-4d92-a551-182bffaae375"
+			"id": "b3549ea3-aaf6-4107-a0f3-5a2fda3f10d1"
 		},
 		{
 			"name": "Your webhook endpoints",
 			"item": [
 				{
 					"name": "Authorization",
-					"id": "63f68b72-7775-4c50-9182-a6c2c527fc86",
+					"id": "feda0629-ef84-478f-8a30-a5bd9db9e269",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -264,7 +264,7 @@
 				},
 				{
 					"name": "Outbound Message from Front",
-					"id": "7ea474a1-f8ff-47ec-83eb-b237fc0361b4",
+					"id": "3d1b40b6-fdb5-4297-97e4-79b5751f08c0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -295,7 +295,7 @@
 					"response": []
 				}
 			],
-			"id": "f0e6e70a-0485-4deb-ac24-a490b2623db6"
+			"id": "505bea8f-fbe4-4418-8473-9240b88d3153"
 		}
 	],
 	"auth": {
@@ -312,7 +312,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "c8f73d12-269c-4788-8129-2cb647313cb0",
+				"id": "03fa1e30-da5a-4687-ab18-3493fe66d4cc",
 				"type": "text/javascript",
 				"exec": [
 					"// Sets the Bearer token to authenticate the request to Front",
@@ -402,7 +402,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "22e5b9b3-9605-45f8-88a2-eb01674be9d5",
+				"id": "7aaeaea4-8c5a-4795-96f7-637cd637b68f",
 				"type": "text/javascript",
 				"exec": [
 					""
