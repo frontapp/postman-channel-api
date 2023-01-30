@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "081b8cd2-baea-4322-bc52-e60527e256b1",
 		"name": "Channel API",
-		"description": "Contact Support:\n Name: Front Platform\n Email: api@frontapp.com",
+		"description": "Contact Support:  \nName: Front Platform  \nUrl: https://community.front.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_uid": "19393231-081b8cd2-baea-4322-bc52-e60527e256b1"
 	},
@@ -83,9 +83,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/channels/:channel_id/inbound_messages",
+									"raw": "https://api2.frontapp.com/channels/:channel_id/inbound_messages",
+									"protocol": "https",
 									"host": [
-										"{{baseUrl}}"
+										"api2",
+										"frontapp",
+										"com"
 									],
 									"path": [
 										"channels",
@@ -105,7 +108,6 @@
 							"status": "Accepted",
 							"code": 202,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
@@ -190,9 +192,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/channels/:channel_id/outbound_messages",
+									"raw": "https://api2.frontapp.com/channels/:channel_id/outbound_messages",
+									"protocol": "https",
 									"host": [
-										"{{baseUrl}}"
+										"api2",
+										"frontapp",
+										"com"
 									],
 									"path": [
 										"channels",
@@ -212,7 +217,6 @@
 							"status": "Accepted",
 							"code": 202,
 							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
