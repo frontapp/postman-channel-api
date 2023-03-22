@@ -300,6 +300,99 @@
 				}
 			],
 			"id": "505bea8f-fbe4-4418-8473-9240b88d3153"
+		},
+		{
+			"name": "Update Channel",
+			"id": "a15f85a2-f08b-4e65-b34e-9ec08f3dbb6c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"status\": \"ok\"\n}",
+					"options": {
+						"raw": {
+							"headerFamily": "json",
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/channels/:channel_id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"channels",
+						":channel_id"
+					],
+					"variable": [
+						{
+							"key": "channel_id",
+							"value": "cha_123"
+						}
+					]
+				},
+				"description": "Update a channel."
+			},
+			"response": [
+				{
+					"id": "4ef5f7eb-dcc5-491a-96e2-4433eb4f42d6",
+					"name": "No content",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": \"ok\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/channels/:channel_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"channels",
+								":channel_id"
+							],
+							"variable": [
+								{
+									"key": "channel_id"
+								}
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": []
+				}
+			]
 		}
 	],
 	"auth": {
