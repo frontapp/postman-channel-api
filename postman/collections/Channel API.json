@@ -409,7 +409,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "03fa1e30-da5a-4687-ab18-3493fe66d4cc",
+				"id": "c3cd9c9a-3f50-46ac-99a5-977362e0237d",
 				"type": "text/javascript",
 				"exec": [
 					"// Sets the Bearer token to authenticate the request to Front",
@@ -422,12 +422,12 @@
 					" *",
 					" */ ",
 					"function setToken() {",
-					"    const hasAllCredentials = pm.environment.get(\"secretKey\") && pm.environment.get(\"channelTypeId\") && pm.environment.get(\"channelId\");",
+					"    const hasAllCredentials = pm.environment.get(\"secretKey\") && pm.environment.get(\"appUid\") && pm.environment.get(\"channelId\");",
 					"    if (!hasAllCredentials)",
 					"        throw new Error('Missing environment variable');",
 					"",
 					"    const signature = pm.environment.get(\"secretKey\");",
-					"    const issuer = pm.environment.get(\"channelTypeId\");",
+					"    const issuer = pm.environment.get(\"appUid\");",
 					"    ",
 					"    const exp = Math.floor(new Date().valueOf() / 1000) + 5; // Current Date + 5 seconds",
 					"    const payload = {",
@@ -499,7 +499,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "7aaeaea4-8c5a-4795-96f7-637cd637b68f",
+				"id": "9aaac8bc-68a1-4606-8872-47faaf3c4c02",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -509,7 +509,7 @@
 	],
 	"variable": [
 		{
-			"id": "44b7b496-a150-40b0-b86a-a9437ee299ea",
+			"id": "1097fcc7-badf-40ef-a81f-4d612fb39150",
 			"key": "baseUrl",
 			"value": "https://api2.frontapp.com",
 			"type": "string"
