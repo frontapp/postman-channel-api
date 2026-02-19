@@ -861,8 +861,9 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "c3cd9c9a-3f50-46ac-99a5-977362e0237d",
+				"id": "77398ce2-d800-4f8d-91ea-e5d5d06b41d8",
 				"type": "text/javascript",
+				"requests": {},
 				"exec": [
 					"// Sets the Bearer token to authenticate the request to Front",
 					"// In practice, there are libraries that handle JWT creation, but we cannot import them to Postman",
@@ -870,28 +871,27 @@
 					"setToken();",
 					"",
 					"/*",
-					" * Given a secret key, generates the API key needed to authenticate the request",
-					" *",
-					" */ ",
+					"/*",
+					"* Given a secret key, generates the API key needed to authenticate the request",
+					"*",
+					"*/ ",
 					"function setToken() {",
-					"    const hasAllCredentials = pm.environment.get(\"secretKey\") && pm.environment.get(\"appUid\") && pm.environment.get(\"channelId\");",
+					"    const hasAllCredentials = pm.environment.get(\"signingSecret\") && pm.environment.get(\"applicationUid\") && pm.environment.get(\"channelId\");",
 					"    if (!hasAllCredentials)",
 					"        throw new Error('Missing environment variable');",
 					"",
 					"    const signature = pm.environment.get(\"secretKey\");",
-					"    const issuer = pm.environment.get(\"appUid\");",
+					"    const issuer = pm.environment.get(\"applicationUid\");",
 					"    ",
 					"    const exp = Math.floor(new Date().valueOf() / 1000) + 5; // Current Date + 5 seconds",
 					"    const payload = {",
-					"      iss: parseInt(issuer, 10),",
+					"      iss: issuer,",
 					"      jti: randomString(),",
 					"      sub: pm.environment.get(\"channelId\"),",
 					"      exp",
 					"    };",
 					"",
 					"    const generatedToken = createJWT(payload, signature);",
-					"    console.log(generatedToken);",
-					"",
 					"    pm.environment.set(\"generatedToken\", generatedToken);",
 					"}",
 					"",
@@ -951,8 +951,9 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "9aaac8bc-68a1-4606-8872-47faaf3c4c02",
+				"id": "9294445e-80bc-4c71-925d-690d6fd76544",
 				"type": "text/javascript",
+				"requests": {},
 				"exec": [
 					""
 				]
@@ -961,10 +962,9 @@
 	],
 	"variable": [
 		{
-			"id": "1097fcc7-badf-40ef-a81f-4d612fb39150",
+			"id": "8120806a-e1f6-47f4-bd16-45cc21323bb3",
 			"key": "baseUrl",
-			"value": "https://api2.frontapp.com",
-			"type": "string"
+			"value": "https://api2.frontapp.com"
 		}
 	]
 }
