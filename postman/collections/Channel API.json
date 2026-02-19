@@ -861,7 +861,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "77398ce2-d800-4f8d-91ea-e5d5d06b41d8",
+				"id": "ecb39d4a-f9b2-403b-84d6-4fa4e5a39ef1",
 				"type": "text/javascript",
 				"requests": {},
 				"exec": [
@@ -876,7 +876,7 @@
 					"*",
 					"*/ ",
 					"function setToken() {",
-					"    const hasAllCredentials = pm.environment.get(\"signingSecret\") && pm.environment.get(\"applicationUid\") && pm.environment.get(\"channelId\");",
+					"    const hasAllCredentials = pm.environment.get(\"secretKey\") && pm.environment.get(\"applicationUid\") && pm.environment.get(\"channelId\");",
 					"    if (!hasAllCredentials)",
 					"        throw new Error('Missing environment variable');",
 					"",
@@ -951,7 +951,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "9294445e-80bc-4c71-925d-690d6fd76544",
+				"id": "216976d1-f7ca-4671-a6ea-3b63578b1c61",
 				"type": "text/javascript",
 				"requests": {},
 				"exec": [
@@ -962,7 +962,7 @@
 	],
 	"variable": [
 		{
-			"id": "8120806a-e1f6-47f4-bd16-45cc21323bb3",
+			"id": "60862256-e0e7-4fad-9467-18d914cdb7f7",
 			"key": "baseUrl",
 			"value": "https://api2.frontapp.com"
 		}
